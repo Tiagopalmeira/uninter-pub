@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiago Palmeira</title>
+  <link rel="stylesheet" href="./style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#qseu">Quem sou eu</a></li>
+        <li><a href="#formacao">Formação profissional</a></li>
+        <li><a href="#projects">Meus projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+<section id="qseu" class="intro">
+  <div class="intro-content">
+        <img src="img/eu.png" alt="Foto de Tiago Palmeira" class="profile-pic" />
+    <div class="intro-text">
+      <h1>TIAGO PALMEIRA</h1>
+      <h2>DESENVOLVEDOR FULLSTACK JUNIOR</h2>
+      <p>CONHEÇA UM POUCO MAIS SOBRE MIM ABAIXO.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="formacao" class="section">
+      <h3>Quem sou eu?</h3>
+      <p>
+        Sou Tiago Santana Palmeira, formado em Desenvolvimento de Sistemas pelo SENAI e atuante no SENAI CIMATEC, onde
+        desenvolvo soluções em software, IoT, inteligência artificial e segurança cibernética para big techs nacionais e
+        internacionais.
+        Na área de IoT, tenho experiência com ESP32, STM32, Raspberry Pi, protocolos como MQTT e comunicação UART/DMA.
+        No back-end, utilizo tecnologias como Python, Node.js e FastAPI. Para o front-end, trabalho com HTML, CSS,
+        JavaScript, ReactJS e Next.js.
+        Além da parte técnica, atuo como palestrante em temas como LGPD, automação e robótica educacional.
+        Mexo um pouco com cibersegurança também.
+        Uma curiosidade sobre mim é que sou sabatista, e por isso levo meus valores pessoais também para minha ética
+        profissional.
+      </p>
+    </section>
+
+    <section class="section">
+      <h3>Formação profissional</h3>
+      <p>
+        Sou formado em Desenvolvimento de Sistemas pelo SENAI Bahia, uma instituição reconhecida nacionalmente pela
+        excelência na formação de profissionais capacitados para o mercado de trabalho. Atualmente, curso graduação em
+        Análise e Desenvolvimento de Sistemas pela UNINTER, uma das melhores instituições de ensino a distância do
+        Brasil. Tenho interesse em me especializar futuramente nas áreas de Segurança da Informação ou Inteligência
+        Artificial, por meio de pós-graduação, mestrado ou doutorado.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h3>Meus projetos:</h3>
+      <p>
+        Confira abaixo alguns dos projetos que dediquei meu tempo livre para estudar e aprender sobre as tecnologias mencionadas.
+      </p>
+
+      <div class="projects">
+        <a href="https://ovo-perfeito.vercel.app/" class="project-card">
+          <img src="./img/egg.png" alt="Ovo Perfeito" />
+          <h4>Ovo Perfeito</h4>
+          <p>Timer de cozimento de ovos em React</p>
+        </a>
+
+        <a href="https://github.com/Tiagopalmeira/mamoothDownload/" class="project-card">
+          <img src="./img/mamooth.png" alt="Projeto MamoothDown" />
+          <h4>MamoothDown</h4>
+          <p>Simples baixador de vídeos via CLI</p>
+        </a>
+
+        <a href="https://qrread-teste.vercel.app/" class="project-card">
+          <img src="./img/readQr.png" alt="Projeto Leitor de Códigos" />
+          <h4>Leitor de Códigos</h4>
+          <p>leitor de código de barras</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="contato" class="section">
+      <h3>Curtiu? Fale comigo!</h3>
+      <form class="form">
+        <label for="nome">Como posso te chamar?</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome." />
+
+        <label for="meio">Qual o melhor meio de comunicação para você?</label>
+        <select id="meio-contato" name="meio-contato">
+          <option value="whatsapp">WhatsApp</option>
+          <option value="email">E-mail</option>
+          <option value="telefone">Ligação</option>
+        </select>
+
+        <label for="contato" id="label-contato">Insira seu contato</label>
+        <input type="text" id="contato" name="contato" placeholder="" />
+
+        <label for="mensagem">Sua mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite o que deseja e em breve entraremos em contato."></textarea>
+
+        <button type="submit" class="button">Enviar</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <h3>Me siga nas minhas redes:</h3>
+      <a class="linkedin" href="https://br.linkedin.com/in/tiago-palmeira123" target="_blank" aria-label="LinkedIn">
+        <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="link para o linkedin">
+      </a>
+      <a class="linkedin" href="https://github.com/tiagopalmeira" target="_blank" aria-label="GitHub">
+        <img src="https://img.icons8.com/?size=100&id=63777&format=png&color=000000" alt="link para o github">
+      </a>
+    </section>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
