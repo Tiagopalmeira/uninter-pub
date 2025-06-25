@@ -1,58 +1,82 @@
-/* Reset básico */
+/* =========================
+  VARIÁVEIS DE CORES GERAIS
+  ========================= */
+:root {
+  --primary-color: #ffcc00;      /* Cor principal (amarelo) */
+  --dark-bg: #111;               /* Fundo escuro */
+  --light-text: #f4f4f4;         /* Texto claro */
+  --card-bg: #fff;               /* Fundo dos cards */
+  --card-text: #555;             /* Texto dos cards */
+  --accent-color: #004aad;       /* Cor de destaque (azul) */
+  --form-bg: #222;               /* Fundo do formulário */
+}
+
+/* =========================
+  RESET DE ESTILOS BÁSICOS
+  ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================
+  ESTILO DO BODY
+  ========================= */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #111;
-  color: #f4f4f4;
-  line-height: 1.6;
-  padding-top: 70px;
-  /* espaço pro header fixo */
+  font-family: 'Poppins', sans-serif; /* Fonte principal */
+  background-color: var(--dark-bg);   /* Fundo escuro */
+  color: var(--light-text);           /* Texto claro */
+  line-height: 1.6;                   /* Espaçamento entre linhas */
+  padding-top: 5vh;                   /* Espaço no topo para o header fixo */
 }
 
-/* Header fixo */
+/* =========================
+  HEADER E NAVBAR
+  ========================= */
 header {
-  position: fixed;
+  position: fixed;                    /* Fixa no topo */
   top: 0;
   width: 100%;
-  background-color: #000;
-  padding: 15px 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  background-color: #000;             /* Fundo preto */
+  padding: 2vh 0;
+  z-index: 1000;                      /* Fica acima dos outros elementos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
 .navbar ul {
-  list-style: none;
+  list-style: none;                   /* Remove marcadores */
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 5vw;
+  flex-wrap: wrap;
 }
 
 .navbar a {
-  color: #f4f4f4;
+  color: var(--light-text);           /* Cor do link */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: #ffcc00;
+  color: var(--primary-color);        /* Cor ao passar o mouse */
 }
 
-/* Conteúdo geral */
+/* =========================
+  CONTEÚDO PRINCIPAL
+  ========================= */
 .content {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 10vh 5vw 5vh;              /* Espaçamento interno */
+  max-width: 1000px;
   margin: auto;
 }
 
-/* Intro - Texto e Imagem lado a lado */
+/* =========================
+  INTRODUÇÃO
+  ========================= */
 .intro {
-  margin-bottom: 40px;
+  margin-bottom: 5vh;
 }
 
 .intro-content {
@@ -70,55 +94,55 @@ header {
 }
 
 .profile-pic {
-  width: 220px;
+  width: 30%;
+  min-width: 180px;
   height: auto;
-  border-radius: 1002px;
+  border-radius: 50%;                 /* Foto redonda */
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .intro h1 {
-  font-size: 36px;
-  color: #ffcc00;
+  font-size: 2.5rem;
+  color: var(--primary-color);
 }
 
 .intro h2 {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #ccc;
   margin-bottom: 10px;
 }
 
-.intro p {
-  font-size: 16px;
+.intro p,
+.section p {
+  font-size: 1rem;
   color: #ddd;
 }
 
-/* Seções */
+/* =========================
+  SEÇÕES GERAIS
+  ========================= */
 .section {
-  margin-top: 50px;
+  margin-top: 5vh;
 }
 
 .section h3 {
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: #ffcc00;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
-.section p {
-  font-size: 16px;
-  color: #ddd;
-}
-
-/* Projetos - Grid Responsivo */
+/* =========================
+  PROJETOS
+  ========================= */
 .projects {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top: 1rem;
 }
 
-/* Estilo dos cards */
 .project-card {
-  background-color: #fff;
+  background-color: var(--card-bg);
   border: 2px solid #ddd;
   border-radius: 12px;
   padding: 1rem;
@@ -135,7 +159,7 @@ header {
 
 .project-card img {
   width: 100%;
-  max-width: 180px;
+  max-width: 160px;
   height: auto;
   border-radius: 8px;
   object-fit: contain;
@@ -145,70 +169,69 @@ header {
   font-weight: 600;
   font-size: 1.2rem;
   color: #003366;
-  margin: 0;
 }
 
 .project-card p {
-  font-weight: 400;
   font-size: 1rem;
-  color: #555;
-  margin: 0;
+  color: var(--card-text);
 }
 
 .project-card:hover {
-  border-color: #004aad;
+  border-color: var(--accent-color);
   box-shadow: 0 6px 15px rgba(0, 74, 173, 0.3);
   transform: translateY(-5px);
   background-color: #f0f5ff;
 }
 
-/* Formulário */
+/* =========================
+  FORMULÁRIO DE CONTATO
+  ========================= */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .form input,
 .form select,
 .form textarea {
-  padding: 10px;
+  padding: 1rem;
   border: none;
   border-radius: 6px;
-  background-color: #222;
+  background-color: var(--form-bg);
   color: #fff;
+  width: 100%;
 }
 
 .form label {
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 0.5rem;
   color: #ccc;
 }
 
 .button {
-  background-color: #ffcc00;
+  background-color: var(--primary-color);
   color: #000;
-  padding: 12px 24px;
+  padding: 1rem 2rem;
   border: none;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
 .button:hover {
   background-color: #e6b800;
 }
 
-/* Redes Sociais */
-h3+a.linkedin {
-  margin-top: 10px;
-}
-
+/* =========================
+  LINKEDIN
+  ========================= */
 .linkedin {
   display: inline-block;
-  margin: 10px 15px 0 0;
+  margin: 1rem 1rem 0 0;
   transition: transform 0.3s ease;
 }
 
@@ -221,45 +244,53 @@ h3+a.linkedin {
   height: 40px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .intro-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-
-  .profile-pic {
-    width: 60%;
-    margin: 0 auto;
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .linkedin img {
-    width: 35px;
-    height: 35px;
-  }
-}
-
+/* =========================
+  FOOTER (RODAPÉ)
+  ========================= */
 footer {
-  background-color: #00000002;
+  background-color: rgba(0, 0, 0, 0.2);
   color: #ccc;
   text-align: center;
-  padding: 20px 10px;
-  margin-top: 40px;
-  font-size: 14px;
-  border-top: 2px solid #333;
+  padding: 2% 5%;
+  margin-top: 5%;
+  font-size: 1rem;
+  border-top: 2px solid #3333336b;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
 }
 
 footer section {
-  max-width: 900px;
+  max-width: 90%;
   margin: 0 auto;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+  RESPONSIVIDADE (TELAS PEQUENAS)
+  ========================= */
+@media (max-width: 768px) {
+  .intro-content {
+   flex-direction: column-reverse;
+   text-align: center;
+  }
+
+  .profile-pic {
+   width: 60%;
+   margin: 0 auto;
+  }
+
+  .linkedin img {
+   width: 35px;
+   height: 35px;
+  }
+
+  footer {
+   padding: 4% 6%;
+   font-size: 0.9rem;
+  }
+
+  footer section {
+   max-width: 100%;
+  }
 }
