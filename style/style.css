@@ -10,7 +10,8 @@ body {
   background-color: #111;
   color: #f4f4f4;
   line-height: 1.6;
-  padding-top: 70px; /* espaço pro header fixo */
+  padding-top: 70px;
+  /* espaço pro header fixo */
 }
 
 /* Header fixo */
@@ -72,7 +73,7 @@ header {
   width: 220px;
   height: auto;
   border-radius: 1002px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
 }
 
 .intro h1 {
@@ -123,7 +124,7 @@ header {
   padding: 1rem;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -201,7 +202,7 @@ header {
 }
 
 /* Redes Sociais */
-h3 + a.linkedin {
+h3+a.linkedin {
   margin-top: 10px;
 }
 
@@ -245,4 +246,20 @@ h3 + a.linkedin {
     width: 35px;
     height: 35px;
   }
+}
+
+footer {
+  background-color: #00000002;
+  color: #ccc;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 2px solid #333;
+}
+
+footer section {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
